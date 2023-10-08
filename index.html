@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Spoad.png">
+    <script src="main.js"></script>
+    <script type="module" src="index.js"></script>
+    <script src="audio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <title>Bitify</title>
+</head>
+
+<!--SCOFIELD EDIT HERE-->
+
+<body>
+    <header>
+        <h1></h1>
+        <img src="Spoad.png" alt="Bitify Logo" id="logo">
+        <h1 style="font-size: 48px; font-weight: bold; text-decoration: underline;">Welcome to Bitify</h1>
+        <h2 style="font-size: 24px;">Convert any Song into Chiptune!<h2>
+    </header>
+    <div class="main-container">
+        <!-- Hidden file input -->
+        <input type="file" name="fileupload" id="fileupload" accept=".midi, .mid" hidden>
+        <div class="button-container">
+            <!-- Label for the hidden file input -->
+            <label for="fileupload" class="greenButton">Upload</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="greenButton">Convert</button>
+            <p id="selectedFileName"></p>
+        </div>
+        <!--<button id="upload-button" onclick="uploadFile()">Upload</button>-->
+        
+    </div>
+
+    <div id="game">
+        <script type="module" src="phaser.js"></script>
+    </div>
+
+    <audio id="test" controls style="display: none;">
+        <source src="NeverGonnaGiveYouUp.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+
+<!--FAQ-->
+    <header>
+        <h1 style="font-size: 48px; font-weight: bold; text-decoration: underline;">F.A.Q.</h1>
+    </header>
+    <h2 class="header">How to play?</h2>
+    <p class="description">
+        
+        After converting your selected song, press "Start." Use (ASDF) and hit the notes as they reach the bottom of the screen to score points. 
+        To play again, press "Restart." Ensure that volume is turned on.
+    </p>
+    <h2 class="header">Why MIDI files?</h2>
+    <p class="description">
+        Musical Instrument Digital Interface (MIDI) files are formatted to include instructions about instruments, 
+        notes, and timing. To capture the characteristics and aesthetics of Chiptune music, audio waveforms of the 
+        musical tracks embedded in the MIDI file are manipulated to produce square, triangle, and sawtooth sound waves.
+        <br>
+        <br>
+        For a library to find and listen to MIDI files, visit <a href="https://freemidi.org/" target="_blank" style="text-decoration: underline; color: white;">freemidi.org</a>.
+    </p>
+    
+    
+<!--SAMPLES-->
+<header>
+    <h1 style="font-size: 48px; font-weight: bold; text-decoration: underline;">Samples</h1>
+</header>
+
+<div id ="sample1" class="play-button-container" onclick="toggleAudio('audio1')">
+    <span class="play-button">Rick Astley - "Never Gonna Give You Up"</span>
+</div>
+
+<audio id="audio1" controls style="display: none;">
+    <source src="NeverGonnaGiveYouUp.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<p></p>
+
+<div class="play-button-container" onclick="toggleAudio('audio2')">
+    <span class="play-button">Queen - "Bohemian Rhapsody"</span>
+</div>
+
+<audio id="audio2" controls style="display: none;">
+    <source src="BoMan.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<p></p>
+
+<div class="play-button-container" onclick="toggleAudio('audio3')">
+    <span class="play-button">Foo Fighters - "Everlong"</span>
+</div>
+
+<audio id="audio3" controls style="display: none;">
+    <source src="Everlong.wav" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<p></p>
+
+<div class="play-button-container" onclick="toggleAudio('audio4')">
+    <span class="play-button">The Beatles - "Eleanor Rigby"</span>
+</div>
+
+<audio id="audio4" controls style="display: none;">
+    <source src="ERigby.wav" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+
+<!--CREDITS-->
+    <header>
+        <h1 style="font-size: 48px; font-weight: bold; text-decoration: underline;">Credits</h1>
+    </header>
+    <h2>
+        <a href="https://www.linkedin.com/in/avyakt-gaur/" target="_blank" style="color: white;">Avyakt Gaur</a> - 
+        <a href="https://www.linkedin.com/in/christopher-ghanma/" target="_blank" style="color: white;">Christopher Ghanma</a> - 
+        <a href="https://www.linkedin.com/in/arik-scofield-26ab44281/" target="_blank" style="color: white;">Arik Scofield</a> - 
+        <a href="https://www.linkedin.com/in/eric-zipor/" target="_blank" style="color: white;">Eric Zipor</a>
+    </h2>
+    
+    <br>    
+    <br>
+    
+</body>
+</html>

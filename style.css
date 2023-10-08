@@ -1,0 +1,126 @@
+/* Reset some default styles */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Background styling */
+html {
+    background: linear-gradient(to bottom, rgb(40, 40, 40), black);
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header img {
+    max-width: 100px;
+}
+
+header h1, h2, header p {
+    
+    font-family: 'Silkscreen', sans-serif;
+    color: white;
+    font-size: 20px;
+    text-align: center; /* This centers the text inside the element */
+}
+
+.description {
+    margin-top: 10px;
+    font-family: 'Silkscreen', sans-serif;
+    color: white;
+    width: 384px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify; /* This centers the text inside the element */
+}
+
+/* Main container styling */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 200px); /* Adjust the value as needed */
+}
+
+
+
+/* Green button styling */
+.greenButton {
+    border-radius: 100px;
+    font-family: 'Silkscreen', sans-serif;
+    background-color: rgb(30, 215, 96);
+    color: white;
+    padding: 10px 20px;
+    width: auto;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+}
+
+.greenButton:hover {
+    background-color: darkgreen;
+}
+
+/* Style the hidden file input to match the button */
+#midiFile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Style for the play button container */
+
+
+/* Style for the play button container */
+.play-button-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 100px;
+    font-family: 'Silkscreen', sans-serif;
+    background-color: rgb(30, 215, 96);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    width: auto;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+/* Change background color to dark green on hover */
+.play-button-container:hover {
+    background-color: darkgreen;
+}
+
+/* Style for the play button icon (you can customize this) */
+.play-button {
+    color: white;
+    font-size: 24px;
+    animation: moveText 5s linear infinite; /* Animation definition */
+}
+
+/* Keyframes animation */
+@keyframes moveText {
+    0% {
+        transform: translateX(0%); /* Initial position */
+    }
+    100% {
+        transform: translateX(100%); /* Move text to the right */
+    }
+}
